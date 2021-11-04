@@ -1,31 +1,16 @@
-// function saludar(xyz) {
-//     return `hola ${xyz}`
-// }
+const miPromesa = () => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('Tenemos un valor en la promesa')
+        }, 1000)
+    })
+}
+
+const medirTiempoAsync = async() => {
+    console.log('Inicio')
 
 
-// const saludar = function(xyz) {
-//     return `Hola: ${xyz}`
-// }
+    console.log('Fin')
+}
 
-const saludar = (nombre = 'Peter') => `Hola: ${nombre}`
-
-
-//const nombre = 'Luisga'
-
-//console.log(saludar())
-
-const getUser = () => ({
-    uid: 'ABC123',
-    username: 'Tony001'
-})
-
-
-//console.log(getUser())
-
-const heroes = [{
-    id: 1,
-    name: 'Batman'
-}, {
-    id: 2,
-    name: 'Superman'
-}]
+medirTiempoAsync()
